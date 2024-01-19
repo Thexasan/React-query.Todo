@@ -130,7 +130,7 @@ const Detail = () => {
               </h1>
             </div>
           </div>
-          <div className="md:relative px-1 lp:px-4 md:left-[-20%]">
+          <div className="md:relative overflow-hidden px-1 lp:px-4 md:left-[-20%]">
             <Swippers carImages={carImages} />
           </div>
         </div>
