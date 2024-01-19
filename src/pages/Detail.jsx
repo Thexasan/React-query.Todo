@@ -3,11 +3,18 @@ import { axiosRequest } from "../utils/axiosRequest";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs, Card, CardContent, Typography } from "@mui/material";
 import Swippers from "../components/Swippers";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsers } from "../reducers/states";
 
 const Detail = () => {
   const [car, setCar] = useState({});
   const [bid, setBid] = useState("");
   const { vin } = useParams();
+
+  const dispatch = useDispatch();
+
+  const cars = useSelector((state) => state.states.cars);
+  console.log(cars);
 
   async function getCatByVin() {
     try {
@@ -20,12 +27,9 @@ const Detail = () => {
     }
   }
 
-  useEffect(() => {
-    getCatByVin();
-  }, [vin]);
-
   const {
     auction,
+    id,
     vin: Vin,
     key,
     manufacturedIn,
@@ -48,6 +52,20 @@ const Detail = () => {
     vinStatus,
     lot,
   } = car;
+
+  async function getCars() {
+    try {
+      const { data } = await axiosRequest.get("api/Car/GetAllCars");
+      dispatch(getUsers(data));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getCatByVin();
+    getCars();
+  }, [vin, dispatch]);
 
   function convertBid() {
     const formateBid = `${final_Bid}`.split("");
@@ -115,7 +133,7 @@ const Detail = () => {
       </header>
 
       <section className="md:flex md:items-center h-[auto] md:justify-between">
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <div className="p-4 md:ml-[4%] flex items-start flex-col justify-between">
             <div className="py-2">
               <h1 className="text-[24px] text-[#262626] font-[700]">
@@ -169,7 +187,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -180,7 +198,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -191,7 +209,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -202,7 +220,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -213,7 +231,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -224,7 +242,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -235,7 +253,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -247,7 +265,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -259,7 +277,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -270,7 +288,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -281,7 +299,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -292,7 +310,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -306,7 +324,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -317,7 +335,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -328,7 +346,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -339,7 +357,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -350,7 +368,7 @@ const Detail = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    pt: "2px",
+                    pt: "4.5px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -359,6 +377,18 @@ const Detail = () => {
                 </Typography>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* recomended Cars */}
+
+      <section>
+        <div className="container m-auto">
+          <div className="text-center my-16">
+            <h1 className="font-bold text-[36px] text-inherit">
+              Recomended Cars
+            </h1>
           </div>
         </div>
       </section>
