@@ -1,0 +1,62 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.foto {
+  background-image: url("./assets/бг.png");
+}
+
+.glass {
+  background: rgba(229, 232, 239, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: 50%;
+    height: 50%;
+  }
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 100%;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
