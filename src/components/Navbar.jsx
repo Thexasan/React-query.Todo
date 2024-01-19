@@ -44,8 +44,8 @@ function Navbars() {
       position="static"
     >
       <Container maxWidth="xl">
-        <Toolbar className="container m-auto" disableGutters>
-          <Link to="#">
+        <Toolbar  disableGutters>
+          <Link to="/">
             <Typography
               variant="h6"
               noWrap
@@ -90,7 +90,7 @@ function Navbars() {
               textDecoration: "none",
             }}
           >
-            <Link to="#">NYSMPL</Link>
+            <Link to="/">NYSMPL</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (

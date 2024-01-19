@@ -34,7 +34,7 @@
   .swiper-slide {
     font-size: 18px;
     background: #fff;
-    width: 100%;
+    width: 92%;
     /* Center slide text vertically */
     display: flex;
     justify-content: start;
@@ -53,10 +53,11 @@
   align-items: center;
 }
 
+
+
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-

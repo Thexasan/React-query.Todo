@@ -132,7 +132,7 @@ const Detail = () => {
               </h1>
             </div>
           </div>
-          <div className="md:relative lp:px-4 md:left-[-20%]">
+          <div className="md:relative px-1 lp:px-4 md:left-[-20%]">
             <Swippers carImages={carImages} />
           </div>
         </div>
@@ -140,12 +140,12 @@ const Detail = () => {
           <div className="flex lp:hidden text-[20px] font-[500] items-center justify-start gap-10">
             Final Bid:
             <h1 className="text-[24px] font-[700] text-green-500">
-              $<span>{final_Bid}</span>
+              $<span>{bid}</span>
             </h1>
           </div>
           <div>
             <Card
-              className="md:absolute h-[100%] md:max-h-[74%] md:right-[10%] md:w-[400px] md:max-w-[33%] md:top-[242px]"
+              className="md:absolute h-[100%] md:max-h-[57%] lg:max-h-[59%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] md:top-[242px]"
               variant="outlined"
             >
               <CardContent>
