@@ -19,7 +19,7 @@ const SearchBar = () => {
   }
 
   useEffect(() => {
-    searchCar();
+    value.length != 0 ? searchCar() : "";
   }, [value]);
 
   return (
@@ -47,7 +47,9 @@ const SearchBar = () => {
           />
           <IconButton
             onClick={() => {
-              navigate(`carsDetail/vin/${value}`);
+              value.length != 0
+                ? navigate(`carsDetail/vin/${value}`)
+                : console.log("nothing to search");
             }}
             type="button"
             sx={{ p: "10px" }}
