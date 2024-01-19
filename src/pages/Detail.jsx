@@ -54,12 +54,10 @@ const Detail = () => {
     if (formateBid.length == 4) {
       let res = formateBid.splice(1, 0, ",");
       setBid(formateBid.join(""));
-    }
-    else if (formateBid.length == 5){
+    } else if (formateBid.length == 5) {
       let res = formateBid.splice(2, 0, ",");
       setBid(formateBid.join(""));
-    }
-    else if (formateBid.length == 6){
+    } else if (formateBid.length == 6) {
       let res = formateBid.splice(3, 0, ",");
       setBid(formateBid.join(""));
     }
@@ -118,7 +116,7 @@ const Detail = () => {
 
       <section className="md:flex md:items-center h-[auto] md:justify-between">
         <div className="w-full">
-          <div className="p-4 md:ml-[8%] flex items-start flex-col justify-between">
+          <div className="p-4 md:ml-[4%] flex items-start flex-col justify-between">
             <div className="py-2">
               <h1 className="text-[24px] text-[#262626] font-[700]">
                 {auction}Vin: <span className="font-[700]">{Vin}</span>
@@ -145,12 +143,12 @@ const Detail = () => {
           </div>
           <div>
             <Card
-              className="md:absolute h-[100%] md:max-h-[57%] lg:max-h-[59%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] md:top-[242px]"
+              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] md:top-[242px]"
               variant="outlined"
             >
               <CardContent>
                 <Typography
-                  sx={{ fontSize:16, fontWeight: "500" }}
+                  sx={{ fontSize: 16, fontWeight: "500" }}
                   color="text.secondary"
                   gutterBottom
                 >
@@ -170,7 +168,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -180,7 +179,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -190,7 +190,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -200,7 +201,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -210,7 +212,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -220,7 +223,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -230,7 +234,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -241,7 +246,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -252,7 +258,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -262,7 +269,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -272,7 +280,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -282,7 +291,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center",  pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -295,7 +305,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -305,7 +316,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -315,7 +327,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -325,7 +338,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"
@@ -335,7 +349,8 @@ const Detail = () => {
                 <Typography
                   sx={{
                     display: "flex",
-                    alignItems: "center", pt:'2px',
+                    alignItems: "center",
+                    pt: "2px",
                     justifyContent: "space-between",
                   }}
                   component="div"

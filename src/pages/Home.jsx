@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="foto  my-auto xl:bg-start mlg:bg-center  w-[full] bg-contain bg-no-repeat h-full sm:h-[77vh] lp:h-[85vh] md:h-[85vh] ">
+      <section className="foto  my-auto xl:bg-center xl:bg-start mlg:bg-center  w-[full] bg-contain bg-no-repeat h-full sm:h-[96vh] lp:h-[100vh] md:h-[105vh] lg:h-[95vh] ">
         <div className="container m-auto">
           <div className="flex flex-col items-center pt-8 px-10 pb-5 justify-center">
             <h1 className="text-[20px] sm:text-[22px] lp:text-[42px] md:text-[48px] lg:text-[60px] md:font-[700] lp:text-center text-white sm:font-[600]">
@@ -55,7 +55,7 @@ const Home = () => {
             </h1>
           </div>
           {/* Products Cars */}
-          <div className="p-4 relative sm:top-[-300px] lp:top-[-241px] lg:top-0 grid lg:grid-cols-[300px_300px_300px] sm:grid-cols-[100%] md:grid-cols-[345px_345px] lp:grid-cols-[280px_280px]  xl:grid-cols-[345px_345px_345px] gap-10 ">
+          <div className="p-4 relative sm:top-[-300px] justify-center lp:top-[-241px] lg:top-0 grid lg:grid-cols-[300px_300px_300px] sm:grid-cols-[100%] md:grid-cols-[345px_345px] lp:grid-cols-[280px_280px]  xl:grid-cols-[345px_345px_345px] gap-10 ">
             {cars?.length !== 0
               ? cars?.map((elem) => {
                   return (

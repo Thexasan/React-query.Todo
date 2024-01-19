@@ -23,7 +23,6 @@ export default function Swippers({ carImages }) {
           "--swiper-pagination-color": "#fff",
         }}
         spaceBetween={30}
-        loop={true}
         navigation={true}
         pagination={{
           clickable: true,
