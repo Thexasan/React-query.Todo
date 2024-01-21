@@ -132,9 +132,8 @@ const Detail = () => {
           <div className="p-4 md:ml-[4%] flex items-start flex-col justify-between">
             <div className="py-2">
               <h1 className="text-[24px] text-[#262626] font-[700]">
-                {auction}  Vin: <span className="font-[700]">{Vin}</span>
+                {auction} Vin:<span className="font-[700]">{Vin}</span>
               </h1>
-              {/* <p className="py-1 text-[16px] text-[#262626] font-[500]"></p> */}
             </div>
             <div className="lp:flex hidden text-[20px] font-[500] items-center justify-start gap-10">
               Final Bid:
@@ -156,7 +155,7 @@ const Detail = () => {
           </div>
           <div>
             <Card
-              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] xl:max-h-[91%] mlg:h-[75%] md:top-[242px]"
+              className="md:absolute h-[100%] md:max-h-[93%] lg:max-h-[96%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] xl:max-h-[98%]  md:top-[242px]"
               variant="outlined"
             >
               <CardContent className="flex flex-col justify-start md:gap-[2px] lg:gap-[3px] xl:gap-[4px]">
@@ -165,7 +164,7 @@ const Detail = () => {
                   color="text.secondary"
                   gutterBottom
                 >
-                  Overview
+                  <span className="md:text-[20px] md:font-[600]">Overview</span>
                 </Typography>
                 <Typography
                   sx={{
@@ -176,7 +175,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Make: <span>{make}</span>
+                  <span className="md:font-[600]">Make:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {make}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -187,7 +189,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Model: <span>{model}</span>
+                  <span className="md:font-[600]">Model:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {model}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -198,7 +203,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Equipment: <span>{equipment}</span>
+                  <span className="md:font-[600]">Equipment:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {equipment}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -209,7 +217,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Lot: <span>{lot}</span>
+                  <span className="md:font-[600]">Lot:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {lot}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -220,7 +231,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Seller: <span>{seller}</span>
+                  <span className="md:font-[600]">Seller:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {seller}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -231,7 +245,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Loss: <span>{loss}</span>
+                  <span className="md:font-[600]">Loss:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {loss}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -242,7 +259,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Primary Damage: <span>{primaryDamage}</span>
+                  <span className="md:font-[600]">Primary Damage:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {primaryDamage}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -253,7 +273,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Secondary Damage: <span>{secondaryDamage}</span>
+                  <span className="md:font-[600]">Secondary Damage:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {secondaryDamage}
+                  </span>
                 </Typography>
 
                 <Typography
@@ -265,7 +288,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Odometer: <span>{odometer}</span>
+                  <span className="md:font-[600]">Odometer:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {odometer}
+                  </span>
                 </Typography>
 
                 <Typography
@@ -277,7 +303,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Start Code: <span>{startCode}</span>
+                  <span className="md:font-[600]">Start Code:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {startCode}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -288,7 +317,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Key: <span>{key}</span>
+                  <span className="md:font-[600]">Key:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {key}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -299,7 +331,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Airbag: <span>{airbag}</span>
+                  <span className="md:font-[600]">Airbag:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {airbag}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -310,8 +345,8 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  VIN Status:{" "}
-                  <span>
+                  <span className="md:font-[600]">VIN Status: </span>
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
                     {Vin} ({vinStatus})
                   </span>
                 </Typography>
@@ -324,7 +359,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Body Type: <span>{bodyType}</span>
+                  <span className="md:font-[600]">Body Type:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {bodyType}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -335,7 +373,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Transmission: <span>{transmission}</span>
+                  <span className="md:font-[600]">Transmission:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {transmission}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -346,7 +387,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Manufactured In: <span>{manufacturedIn}</span>
+                  <span className="md:font-[600]">Manufactured In:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {manufacturedIn}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -357,7 +401,10 @@ const Detail = () => {
                   }}
                   component="div"
                 >
-                  Selling Branch: <span>{sellingBranch}</span>
+                  <span className="md:font-[600]">Selling Branch:</span>{" "}
+                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
+                    {sellingBranch}
+                  </span>
                 </Typography>
                 <Typography
                   sx={{
@@ -365,13 +412,16 @@ const Detail = () => {
                     alignItems: "center",
                     pt: "4.5px",
                     justifyContent: "space-between",
-                    sm:{
-                      pt:'10px'
-                    }
+                    sm: {
+                      pt: "10px",
+                    },
                   }}
                   component="div"
                 >
-                  Auction Date: <span>{formattedDate}</span>
+                  <span className="md:font-[600]">Auction Date:</span>{" "}
+                  <span className="md:text-[17px] md:font-[600] md:text-[#1E293B]">
+                    {formattedDate}
+                  </span>
                 </Typography>
               </CardContent>
             </Card>
