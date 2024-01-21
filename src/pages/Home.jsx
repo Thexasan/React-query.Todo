@@ -12,7 +12,6 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const cars = useSelector((state) => state.states.cars);
-  console.log(cars);
 
   async function getCars() {
     try {

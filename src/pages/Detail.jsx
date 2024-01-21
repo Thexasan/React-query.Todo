@@ -14,7 +14,6 @@ const Detail = () => {
   const dispatch = useDispatch();
 
   const cars = useSelector((state) => state.states.cars);
-  console.log(cars);
 
   async function getCatByVin() {
     try {
@@ -81,8 +80,6 @@ const Detail = () => {
     }
   }
 
-  console.log(bid);
-
   const inputDate = new Date(auctionDate);
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -115,7 +112,6 @@ const Detail = () => {
     minutes < 10 ? "0" : ""
   }${minutes} ${ampm}`;
 
-  console.log(formattedDate);
 
   useMemo(() => {
     convertBid();
@@ -161,7 +157,7 @@ const Detail = () => {
           </div>
           <div>
             <Card
-              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] md:top-[242px]"
+              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] mlg:h-[75%] md:top-[242px]"
               variant="outlined"
             >
               <CardContent>
