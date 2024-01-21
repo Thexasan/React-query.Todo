@@ -2,13 +2,14 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Detail, Home, Layout } from "./routes/Routes";
+import Loader from "./components/Loader";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader/>}>
           <Layout />
         </Suspense>
       ),
@@ -16,7 +17,7 @@ const App = () => {
         {
           index: true,
           element: (
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader/>}>
               <Home />
             </Suspense>
           ),
@@ -24,7 +25,7 @@ const App = () => {
         {
           path: "carsDetail/vin/:vin",
           element: (
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader/>}>
               <Detail />
             </Suspense>
           ),

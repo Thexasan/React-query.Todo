@@ -112,7 +112,6 @@ const Detail = () => {
     minutes < 10 ? "0" : ""
   }${minutes} ${ampm}`;
 
-
   useMemo(() => {
     convertBid();
   }, [formattedDate]);
@@ -133,7 +132,7 @@ const Detail = () => {
           <div className="p-4 md:ml-[4%] flex items-start flex-col justify-between">
             <div className="py-2">
               <h1 className="text-[24px] text-[#262626] font-[700]">
-                {auction}Vin: <span className="font-[700]">{Vin}</span>
+                {auction}  Vin: <span className="font-[700]">{Vin}</span>
               </h1>
               {/* <p className="py-1 text-[16px] text-[#262626] font-[500]"></p> */}
             </div>
@@ -157,10 +156,10 @@ const Detail = () => {
           </div>
           <div>
             <Card
-              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] mlg:h-[75%] md:top-[242px]"
+              className="md:absolute h-[100%] md:max-h-[82%] lg:max-h-[85%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] xl:max-h-[91%] mlg:h-[75%] md:top-[242px]"
               variant="outlined"
             >
-              <CardContent>
+              <CardContent className="flex flex-col justify-start md:gap-[2px] lg:gap-[3px] xl:gap-[4px]">
                 <Typography
                   sx={{ fontSize: 16, fontWeight: "500" }}
                   color="text.secondary"
@@ -366,6 +365,9 @@ const Detail = () => {
                     alignItems: "center",
                     pt: "4.5px",
                     justifyContent: "space-between",
+                    sm:{
+                      pt:'10px'
+                    }
                   }}
                   component="div"
                 >
@@ -381,7 +383,7 @@ const Detail = () => {
 
       <section>
         <div className="container m-auto">
-          <div className="text-center my-16">
+          <div className="text-center md:my-[40%] lg:my-[200px] my-16">
             <h1 className="font-bold text-[36px] text-inherit">
               Recomended Cars
             </h1>

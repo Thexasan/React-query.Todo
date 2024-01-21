@@ -40,7 +40,6 @@ const SearchBar = () => {
             placeholder="VIN or Lot"
             value={value}
             onChange={(e) => {
-              console.log(e.target.value);
               setValue(e.target.value);
             }}
             inputProps={{ "aria-label": "search google maps" }}
