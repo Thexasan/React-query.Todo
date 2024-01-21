@@ -127,7 +127,7 @@ const Detail = () => {
         </Breadcrumbs>
       </header>
 
-      <section className="md:flex md:items-center h-[auto] md:justify-between">
+      <section className="m-auto">
         <div className="w-full overflow-hidden">
           <div className="p-4 md:ml-[4%] flex items-start flex-col justify-between">
             <div className="py-2">
@@ -142,289 +142,296 @@ const Detail = () => {
               </h1>
             </div>
           </div>
-          <div className="md:relative overflow-hidden px-1 lp:px-4 md:left-[-20%]">
-            <Swippers carImages={carImages} />
-          </div>
-        </div>
-        <div className="p-4">
-          <div className="flex lp:hidden text-[20px] font-[500] items-center justify-start gap-10">
-            Final Bid:
-            <h1 className="text-[24px] font-[700] text-green-500">
-              $<span>{bid}</span>
-            </h1>
-          </div>
-          <div>
-            <Card
-              className="md:absolute h-[100%] md:max-h-[93%] lg:max-h-[96%] md:right-[2%] lg:right-[10%] md:w-[400px] md:max-w-[43%] lg:max-w-[33%] xl:max-h-[98%]  md:top-[242px]"
-              variant="outlined"
-            >
-              <CardContent className="flex flex-col justify-start md:gap-[2px] lg:gap-[3px] xl:gap-[4px]">
-                <Typography
-                  sx={{ fontSize: 16, fontWeight: "500" }}
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  <span className="md:text-[20px] md:font-[600]">Overview</span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
+          <div className="md:grid md:grid-cols-[100%_100%] md:items-start">
+            <div className="md:relative  overflow-hidden px-1 lp:px-4 md:left-[-20%]">
+              <Swippers carImages={carImages} />
+              <div>
+                <div className="p-4">
+                  <div className="flex lp:hidden text-[20px] font-[500] items-center justify-start gap-10">
+                    Final Bid:
+                    <h1 className="text-[24px] font-[700] text-green-500">
+                      $<span>{bid}</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Make:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {make}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Model:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {model}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Equipment:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {equipment}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Lot:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {lot}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Seller:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {seller}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Loss:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {loss}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Primary Damage:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {primaryDamage}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Secondary Damage:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {secondaryDamage}
-                  </span>
-                </Typography>
+            <div className="md:container p-1 md:p-0">
+              <Card
+                className="h-[100%] md:relative md:left-[-382px] lg:left-[-400px] xl:left-[-500px] md:max-h-[93%] lg:max-h-[96%] md:w-[400px] md:max-w-[49%] lg:max-w-[38%] xl:w-[36%] xl:max-h-[95%]"
+                variant="outlined"
+              >
+                <CardContent className="flex  flex-col justify-start md:gap-[2px] lg:gap-[3px] xl:gap-[4px]">
+                  <Typography
+                    sx={{ fontSize: 16, fontWeight: "500" }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <span className="text-[20px] font-[600]">
+                      Overview
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Make:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {make}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Model:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {model}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Equipment:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {equipment}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Lot:</span>{" "}
+                    <span className="md:text-[18px] font-[600] md:text-[#1E293B]">
+                      {lot}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Seller:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {seller}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Loss:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {loss}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Primary Damage:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {primaryDamage}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Secondary Damage:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {secondaryDamage}
+                    </span>
+                  </Typography>
 
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Odometer:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {odometer}
-                  </span>
-                </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Odometer:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {odometer}
+                    </span>
+                  </Typography>
 
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Start Code:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {startCode}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Key:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {key}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Airbag:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {airbag}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">VIN Status: </span>
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {Vin} ({vinStatus})
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Body Type:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {bodyType}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Transmission:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {transmission}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Manufactured In:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {manufacturedIn}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Selling Branch:</span>{" "}
-                  <span className="md:text-[18px] md:font-[600] md:text-[#1E293B]">
-                    {sellingBranch}
-                  </span>
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    pt: "4.5px",
-                    justifyContent: "space-between",
-                    sm: {
-                      pt: "10px",
-                    },
-                  }}
-                  component="div"
-                >
-                  <span className="md:font-[600]">Auction Date:</span>{" "}
-                  <span className="md:text-[17px] md:font-[600] md:text-[#1E293B]">
-                    {formattedDate}
-                  </span>
-                </Typography>
-              </CardContent>
-            </Card>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Start Code:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {startCode}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Key:</span>{" "}
+                    <span className="md:text-[18px] font-[text-[#1E293B]">
+                      {key}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Airbag:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {airbag}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">VIN Status: </span>
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {Vin} ({vinStatus})
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Body Type:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {bodyType}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Transmission:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {transmission}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Manufactured In:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {manufacturedIn}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Selling Branch:</span>{" "}
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
+                      {sellingBranch}
+                    </span>
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      pt: "6.5px",
+                      justifyContent: "space-between",
+                      sm: {
+                        pt: "10px",
+                      },
+                    }}
+                    component="div"
+                  >
+                    <span className="font-[600]">Auction Date:</span>{" "}
+                    <span className="md:text-[17px] font-[600] text-[#1E293B]">
+                      {formattedDate}
+                    </span>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

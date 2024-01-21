@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import 'swiper/css/navigation';
 import "../App.css";
 
 // import required modules
@@ -37,7 +38,7 @@ export default function Swippers({ carImages }) {
               key={el.id}
             >
               <img
-                className="rounded-[10px]"
+                className="rounded-[10px] "
                 src={`${import.meta.env.VITE_APP_API_FILES}${el.fileName}`}
                 alt=""
               />
@@ -51,9 +52,10 @@ export default function Swippers({ carImages }) {
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
+        navigation={true}
         watchSlidesProgress={false}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper my-2"
+        className="mySwiper my-5"
       >
         {carImages?.map((el) => {
           return (

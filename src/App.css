@@ -28,8 +28,24 @@
 
 @media (min-width: 768px) {
   .swiper {
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
+  }
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 92%;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1220px) {
+  .swiper {
+    width: 56%;
+    height: 56%;
   }
   .swiper-slide {
     font-size: 18px;
@@ -52,8 +68,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
 
 .swiper-slide img {
   display: block;
