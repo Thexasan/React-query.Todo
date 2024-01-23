@@ -159,7 +159,7 @@ const Detail = () => {
 
             <div className="md:container p-1 md:p-0">
               <Card
-                className="h-[100%] md:relative md:left-[-382px] lg:left-[-400px] xl:left-[-500px] md:max-h-[93%] lg:max-h-[96%] md:w-[400px] md:max-w-[49%] lg:max-w-[38%] xl:w-[36%] xl:max-h-[95%]"
+                className="h-[100%] md:relative md:left-[-382px] mlg:left-[-600px] lg:left-[-400px] xl:left-[-500px] md:max-h-[93%] lg:max-h-[96%] md:w-[400px] md:max-w-[49%] lg:max-w-[38%] xl:w-[36%] xl:max-h-[95%]"
                 variant="outlined"
               >
                 <CardContent className="flex  flex-col justify-start md:gap-[2px] lg:gap-[3px] xl:gap-[4px]">
@@ -168,9 +168,7 @@ const Detail = () => {
                     color="text.secondary"
                     gutterBottom
                   >
-                    <span className="text-[20px] font-[600]">
-                      Overview
-                    </span>
+                    <span className="text-[20px] font-[600]">Overview</span>
                   </Typography>
                   <Typography
                     sx={{
@@ -324,7 +322,7 @@ const Detail = () => {
                     component="div"
                   >
                     <span className="font-[600]">Key:</span>{" "}
-                    <span className="md:text-[18px] font-[text-[#1E293B]">
+                    <span className="md:text-[18px] font-[600] text-[#1E293B]">
                       {key}
                     </span>
                   </Typography>
