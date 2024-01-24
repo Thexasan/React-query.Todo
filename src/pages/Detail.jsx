@@ -2,9 +2,10 @@ import React, { useEffect, useMemo, useState } from "react";
 import { axiosRequest } from "../utils/axiosRequest";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs, Card, CardContent, Typography } from "@mui/material";
-import Swippers from "../components/Swippers";
+import Swippers from "../components/Swiipper/Swippers";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../reducers/states";
+// import SwipperRecom from "../components/swiperForRecomended/SwippersRecom";
 
 const Detail = () => {
   const [car, setCar] = useState({});
@@ -438,10 +439,14 @@ const Detail = () => {
 
       <section>
         <div className="container m-auto">
-          <div className="text-center md:my-[40%] lg:my-[200px] my-16">
+          <div className="text-center md:my-[40%] lg:my-[200px] my-16 xl:my-10">
             <h1 className="font-bold text-[36px] text-inherit">
               Recomended Cars
             </h1>
+          </div>
+
+          <div>
+            {/* <SwipperRecom cars={carImages}/> */}
           </div>
         </div>
       </section>
