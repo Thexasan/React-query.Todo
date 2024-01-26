@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 import "./swap.css";
 
 // import required modules
@@ -24,6 +24,7 @@ export default function Swippers({ carImages }) {
           "--swiper-pagination-color": "#fff",
         }}
         spaceBetween={30}
+        
         navigation={true}
         pagination={{
           clickable: true,
@@ -34,9 +35,7 @@ export default function Swippers({ carImages }) {
       >
         {carImages?.map((el) => {
           return (
-            <SwiperSlide
-              key={el.id}
-            >
+            <SwiperSlide key={el.id}>
               <img
                 className="rounded-[10px] "
                 src={`${import.meta.env.VITE_APP_API_FILES}${el.fileName}`}

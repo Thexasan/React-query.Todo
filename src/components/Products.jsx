@@ -7,6 +7,8 @@ import Typography from "@mui/material/Typography";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 
 export default function Products(props) {
+  const { image, manufacturedIn, auction, vin, final_Bid } = props;
+
   const [bid, setBid] = React.useState("");
   function convertBid() {
     const formateBid = `${final_Bid}`.split("");
@@ -21,10 +23,9 @@ export default function Products(props) {
       setBid(formateBid.join(""));
     }
   }
-  const { image, manufacturedIn, auction, vin, final_Bid } = props;
 
   React.useMemo(() => {
-    convertBid();
+    return convertBid();
   }, []);
 
   return (

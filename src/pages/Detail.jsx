@@ -5,16 +5,26 @@ import { Breadcrumbs, Card, CardContent, Typography } from "@mui/material";
 import Swippers from "../components/Swiipper/Swippers";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../reducers/states";
-// import SwipperRecom from "../components/swiperForRecomended/SwippersRecom";
+import Products from "../components/Products";
 
 const Detail = () => {
   const [car, setCar] = useState({});
   const [bid, setBid] = useState("");
+  const [recomended, setRecomended] = useState([]);
   const { vin } = useParams();
 
   const dispatch = useDispatch();
 
   const cars = useSelector((state) => state.states.cars);
+
+  function getRandomElements(arr, numElements) {
+    const shuffledArray = arr
+      ?.filter((el) => el.id != id)
+      .slice()
+      .sort(() => Math.random() - 0.5);
+    const selectedElements = shuffledArray.slice(0, numElements);
+    return setRecomended(selectedElements);
+  }
 
   async function getCatByVin() {
     try {
@@ -115,7 +125,8 @@ const Detail = () => {
 
   useMemo(() => {
     convertBid();
-  }, [formattedDate]);
+    getRandomElements(cars, 6);
+  }, [formattedDate, cars]);
 
   return (
     <>
@@ -147,7 +158,7 @@ const Detail = () => {
             <div className="md:relative  overflow-hidden px-1 lp:px-4 md:left-[-20%]">
               <Swippers carImages={carImages} />
               <div>
-                <div className="p-4">
+                <div className="p-4 lp:hidden">
                   <div className="flex lp:hidden text-[20px] font-[500] items-center justify-start gap-10">
                     Final Bid:
                     <h1 className="text-[24px] font-[700] text-green-500">
@@ -439,14 +450,27 @@ const Detail = () => {
 
       <section>
         <div className="container m-auto">
-          <div className="text-center md:my-[40%] lg:my-[200px] my-16 xl:my-10">
+          <div className="text-center md:my-[10%] lg:my-[50px] my-16 xl:my-10">
             <h1 className="font-bold text-[36px] text-inherit">
               Recomended Cars
             </h1>
           </div>
 
-          <div>
-            {/* <SwipperRecom cars={carImages}/> */}
+          <div className="grid lg:grid-cols-3 lp:grid-cols-2 sm:grid-cols-1 justify-items-center gap-[20px] justify-center">
+            {recomended?.map((item) => (
+              <div key={item.id}>
+                {/* {console.log(item)} */}
+                <Products
+                  auction={item.auction}
+                  vin={item.vin}
+                  final_Bid={item.final_Bid}
+                  manufacturedIn={item.manufacturedIn}
+                  image={`${import.meta.env.VITE_APP_API_FILES}${
+                    item?.carImages[0]?.fileName
+                  }`}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

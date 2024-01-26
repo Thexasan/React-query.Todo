@@ -1,11 +1,13 @@
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 body {
   font-size: 16px;
 }
 .done {
-  text-align:center;
+  text-align: center;
   margin: 20px;
   font-size: 144px;
   font-weight: bold;
@@ -47,17 +49,15 @@ body {
     border-bottom-color: #fdb014;
   }
 
-
-
   .car {
     height: 1rem;
     width: 1em;
     fill: currentColor;
     vertical-align: middle;
     display: inline-block;
-    animation: drive .25s ease infinite;
+    animation: drive 0.25s ease infinite;
     position: relative;
-    top: .1em;
+    top: 0.1em;
   }
   .line {
     width: 100%;
@@ -71,25 +71,25 @@ body {
       display: block;
       content: "";
       position: absolute;
-      width: .5em;
+      width: 0.5em;
       height: 4em;
       background: gold;
       display: block;
       position: absolute;
       top: 100%;
-      right: -.25em;
+      right: -0.25em;
       opacity: 0;
       transform: perspective(5em) rotateX(70deg) rotateZ(-2deg);
       animation: goAway 1.6s ease infinite;
-      box-shadow: 0 1px 1px rgba(0,0,0,.95);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.95);
     }
     &:after {
-      animation-delay: .8s;
+      animation-delay: 0.8s;
     }
 
     &:nth-of-type(odd) {
       &:before {
-        animation-delay: .4s;
+        animation-delay: 0.4s;
       }
       &:after {
         animation-delay: 1.2s;
@@ -98,9 +98,9 @@ body {
   }
 }
 
-
 @keyframes drive {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg) translate(0, 0);
   }
   25% {
@@ -123,7 +123,7 @@ body {
     height: 0;
     opacity: 1;
     top: 25%;
-    right: .4em;
+    right: 0.4em;
   }
   98% {
     width: 0;
@@ -136,8 +136,9 @@ body {
     top: 100%;
   }
 }
-@keyframes spin { 
+@keyframes spin {
   100% {
-    transform:rotate(360deg); 
-  } 
+    transform: rotate(360deg);
+  }
 }
+

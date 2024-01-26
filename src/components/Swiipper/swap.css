@@ -5,10 +5,12 @@
   }
   
   @media (min-width: 768px) {
+
     .swiper {
       width: 60%;
       height: 60%;
     }
+    
     .swiper-slide {
       font-size: 18px;
       background: #fff;
