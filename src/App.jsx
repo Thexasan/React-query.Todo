@@ -7,7 +7,7 @@ const App = () => {
   if (isFetching || isLoading) {
     return <div>Loading ...</div>;
   }
-  
+
   if (isError) {
     return <h1>Data not Found</h1>;
   }
