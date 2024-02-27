@@ -1,8 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { TodoService } from "../services";
 import { queryKeys } from "../shared";
 
-const { getTodos, getTodosById } = TodoService;
+const { getTodos, getTodosById, postTodo } = TodoService;
 
 export const useTodos = () => {
   return useQuery({
@@ -13,7 +13,7 @@ export const useTodos = () => {
   });
 };
 
-const todoById = 1;
+const todoById = Math.floor(Math.random() * 200);
 
 export const useTodosById = () => {
   return useQuery({
@@ -22,5 +22,17 @@ export const useTodosById = () => {
       return getTodosById(todoById);
     },
     select: ({ data }) => data,
+  });
+};
+
+export const usePostTodo = () => {
+  return useMutation({
+    mutationKey: ["create todo"],
+    mutationFn: (title) => {
+      return postTodo(title);
+    },
+    onSuccess: () => {
+      return alert("successfull");
+    },
   });
 };
