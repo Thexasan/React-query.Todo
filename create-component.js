@@ -18,7 +18,7 @@ function createComponentFiles(type, componentName) {
 }
 
 function getFolderPath(type, componentName) {
-  return path.join(__dirname, type === 'component' ? './src/components/' : './src/pages/', componentName);
+  return path.join(__dirname, type === 'component' ? './src/shared/components' : './src/pages/', componentName);
 }
 
 function createFolderIfNotExists(folderPath) {

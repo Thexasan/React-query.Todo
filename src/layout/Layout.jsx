@@ -1,12 +1,16 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
+import { Footer, Navbar } from "./components";
 
 export const Layout = () => {
   return (
     <>
-      <header>Header</header>
+      <header>
+        <Navbar />
+      </header>
       <Outlet />
-      <footer>Footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
